@@ -38,7 +38,7 @@ def register():
             ibm_db.bind_param(prep_stmt, 3, password)
             ibm_db.execute(prep_stmt)
             msg = 'You have successfully registered !'
-            return render_template('login.html', msg = username)
+            return render_template('login.html', msg = msg)
     elif request.method == 'POST':
         msg = 'Please fill out the form !'
     return render_template('register.html', msg = msg)

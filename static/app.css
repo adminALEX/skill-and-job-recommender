@@ -21,10 +21,27 @@ body {
     height: 100vh
 }
 
+#hide {
+    animation: hideAnimation 0s ease-in 5s;
+  }
+  
+  @keyframes hideAnimation {
+    to {
+      opacity: 0;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+  }
+
 .user {
+    height:330px;
     width: 90%;
     max-width: 340px;
     margin: 10vh auto;
+}
+.note p{
+    text-align: center;
 }
 
 .user__header h1{
@@ -79,6 +96,17 @@ body {
 
 .form_input  :focus {
     background: darken(#fff, 3%);
+}
+.note{
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+.user-alert h2{
+    font-family: var(--font-family);
+    font-size: var(--font-size-large);
+    color: rgb(102, 37, 37);
 }
 
 .btn {
